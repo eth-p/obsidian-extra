@@ -1,0 +1,12 @@
+# Development
+node_modules
+dist
+
+# System
+.DS_Store
+._*
+
+# IDEs
+.vscode
+.idea
+*.iml
