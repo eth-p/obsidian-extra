@@ -1,5 +1,5 @@
 import { App as ObsidianApp, PluginManifest } from 'obsidian';
-import { App, Latest, Version } from 'obsidian-undocumented';
+import { App, Latest, PluginID, Version } from 'obsidian-undocumented';
 
 /**
  * Returns the IDs of all installed community plugins.
@@ -8,7 +8,7 @@ import { App, Latest, Version } from 'obsidian-undocumented';
  *
  * @returns The plugin IDs.
  */
-export default function getInstalledPluginIDs<V extends Version = Latest>(app: ObsidianApp): string[] {
+export default function getInstalledPluginIDs<V extends Version = Latest>(app: ObsidianApp): PluginID[] {
 	const manifests = (app as App<V>).plugins.manifests;
 	return Object.keys(manifests);
 }

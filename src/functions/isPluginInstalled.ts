@@ -1,5 +1,5 @@
 import { App as ObsidianApp } from 'obsidian';
-import { Latest, Version } from 'obsidian-undocumented';
+import { Latest, PluginID, Version } from 'obsidian-undocumented';
 
 import getPluginManifest from './getPluginManifest';
 
@@ -11,6 +11,6 @@ import getPluginManifest from './getPluginManifest';
  *
  * @returns True if the plugin is installed.
  */
-export default function isPluginInstalled<V extends Version = Latest>(app: ObsidianApp, pluginID: string): boolean {
+export default function isPluginInstalled<V extends Version = Latest>(app: ObsidianApp, pluginID: PluginID): boolean {
 	return getPluginManifest<V>(app, pluginID) !== null;
 }

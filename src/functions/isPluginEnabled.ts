@@ -1,5 +1,5 @@
 import { App as ObsidianApp } from 'obsidian';
-import { App, Latest, Version } from 'obsidian-undocumented';
+import { App, Latest, PluginID, Version } from 'obsidian-undocumented';
 
 /**
  * Checks if a community plugin is enabled.
@@ -9,6 +9,6 @@ import { App, Latest, Version } from 'obsidian-undocumented';
  *
  * @returns True if the plugin is installed and enabled.
  */
-export default function isPluginEnabled<V extends Version = Latest>(app: ObsidianApp, pluginID: string): boolean {
+export default function isPluginEnabled<V extends Version = Latest>(app: ObsidianApp, pluginID: PluginID): boolean {
 	return (app as App<V>).plugins.enabledPlugins.has(pluginID);
 }

@@ -1,5 +1,5 @@
 import { App as ObsidianApp, PluginManifest } from 'obsidian';
-import { App, Latest, Version } from 'obsidian-undocumented';
+import { App, Latest, PluginID, Version } from 'obsidian-undocumented';
 
 /**
  * Gets the manifest of an installed community plugin.
@@ -11,7 +11,7 @@ import { App, Latest, Version } from 'obsidian-undocumented';
  */
 export default function getPluginManifest<V extends Version = Latest>(
 	app: ObsidianApp,
-	pluginID: string,
+	pluginID: PluginID,
 ): PluginManifest | null {
 	const manifests = (app as App<V>).plugins.manifests;
 	if (!Object.prototype.hasOwnProperty.call(manifests, pluginID)) {

@@ -1,5 +1,5 @@
 import { App as ObsidianApp, Plugin } from 'obsidian';
-import { App, Latest, Version } from 'obsidian-undocumented';
+import { App, Latest, PluginID, Version } from 'obsidian-undocumented';
 
 /**
  * Gets the instance of a loaded and intialized community plugin.
@@ -11,7 +11,7 @@ import { App, Latest, Version } from 'obsidian-undocumented';
  */
 export default function getPluginInstance<V extends Version = Latest>(
 	app: ObsidianApp,
-	pluginID: string,
+	pluginID: PluginID,
 ): Plugin | null {
 	return (app as App<V>).plugins.getPlugin(pluginID);
 }

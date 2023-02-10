@@ -1,5 +1,5 @@
 import { App as ObsidianApp } from 'obsidian';
-import { App, Latest, Version } from 'obsidian-undocumented/unsafe';
+import { App, Latest, PluginID, Version } from 'obsidian-undocumented/unsafe';
 
 import isPluginEnabled from './isPluginEnabled';
 
@@ -16,7 +16,7 @@ isPluginEnabled;
  */
 export default async function reloadPlugin<V extends Version = Latest>(
 	app: ObsidianApp,
-	pluginID: string,
+	pluginID: PluginID,
 ): Promise<boolean> {
 	if (!isPluginEnabled<V>(app, pluginID)) {
 		return false;
