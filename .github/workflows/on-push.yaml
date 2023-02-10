@@ -1,0 +1,41 @@
+name: Push
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+
+jobs:
+  run_tests:
+    name: Run Tests
+    uses: ./.github/workflows/test.yaml
+    with:
+      commit: ${{ github.sha }}
+
+  version_check:
+    name: Check for Version Bump
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - id: check
+        uses: EndBug/version-check@v2
+        with:
+          diff-search: true
+          file-name: package.json
+          token: ${{ secrets.GITHUB_TOKEN }}
+    outputs:
+      version_changed: ${{ steps.check.outputs.changed }}
+      version: ${{ steps.check.outputs.version }}
+      commit: ${{ steps.check.outputs.commit }}
+
+  version_bumped:
+    name: Publish
+    secrets: inherit
+    needs: [run_tests, version_check]
+    if: needs.version_check.outputs.version_changed == 'true'
+    uses: ./.github/workflows/publish.yaml
+    with:
+      version: ${{ needs.version_check.outputs.version }}
+      commit: ${{ needs.version_check.outputs.commit }}
