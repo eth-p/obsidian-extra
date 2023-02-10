@@ -7,13 +7,15 @@
     "build": "tsc -p . --module es6 --outDir dist/esm && tsc -p . --module commonjs --outDir dist/cjs",
 	"test": "true"
   },
-  "types": "index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "exports": {
 	".": {
+		"types": "./dist/types/index.d.ts",
     	"import": "./dist/esm/index.js",
     	"require": "./dist/cjs/index.js"
 	},
 	"./unsafe": {
+		"types": "./dist/types/unsafe.d.ts",
     	"import": "./dist/esm/unsafe.js",
     	"require": "./dist/cjs/unsafe.js"
 	}
