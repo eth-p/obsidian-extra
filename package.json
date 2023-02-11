@@ -3,22 +3,22 @@
   "version": "0.1.1",
   "description": "Utilities for working with Obsidian's undocumented API in a version-agnostic manner.",
   "scripts": {
-	"format": "prettier --config .prettierrc --write src",
+    "format": "prettier --config .prettierrc --write src",
     "build": "tsc -p . --module es6 --outDir dist/esm && tsc -p . --module commonjs --outDir dist/cjs",
-	"test": "true"
+    "test": "true"
   },
   "types": "./dist/types/index.d.ts",
   "exports": {
-	".": {
-		"types": "./dist/types/index.d.ts",
-    	"import": "./dist/esm/index.js",
-    	"require": "./dist/cjs/index.js"
-	},
-	"./unsafe": {
-		"types": "./dist/types/unsafe.d.ts",
-    	"import": "./dist/esm/unsafe.js",
-    	"require": "./dist/cjs/unsafe.js"
-	}
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    },
+    "./unsafe": {
+      "types": "./dist/types/unsafe.d.ts",
+      "import": "./dist/esm/unsafe.js",
+      "require": "./dist/cjs/unsafe.js"
+    }
   },
   "repository": {
     "type": "git",
@@ -30,7 +30,11 @@
     "url": "https://github.com/eth-p/obsidian-extra/issues"
   },
   "homepage": "https://github.com/eth-p/obsidian-extra#readme",
-  "keywords": ["obsidian", "obsidian.md", "lib"],
+  "keywords": [
+    "obsidian",
+    "obsidian.md",
+    "lib"
+  ],
   "peerDependencies": {
     "obsidian": ">=1.0.0",
     "obsidian-undocumented": "latest"
@@ -39,5 +43,8 @@
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
     "prettier": "^2.8.4",
     "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@types/node": "^18.13.0"
   }
 }

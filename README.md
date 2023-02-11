@@ -50,6 +50,20 @@ Certain functions are deemed "unsafe", as they have the ability to easily break 
 - [Disable plugins](./src/functions/disablePlugin.ts) (unsafe)
 - [Reload plugins](./src/functions/reloadPlugin.ts) (unsafe)
 
+### CSS
+
+- [List installed snippets](./src/functions/getInstalledSnippetIDs.ts)
+- [List enabled snippets](./src/functions/getEnabledSnippetIDs.ts)
+- [Check if snippet is installed](./src/functions/isSnippetInstalled.ts)
+- [Check if snippet is enabled](./src/functions/isSnippetEnabled.ts)
+- [Get style element of snippet](./src/functions/getSnippetStyleElement.ts)
+- [Get style elements of all snippets](./src/functions/getSnippetStyleElements.ts)
+- [List installed themes](./src/functions/getInstalledThemeIDs.ts)
+- [Get current theme ID](./src/functions/getCurrentThemeID.ts)
+- [Get theme manifest](./src/functions/getThemeManifest.ts)
+- [Get theme style element](./src/functions/getThemeStyleElement.ts)
+- [Check if theme is installed](./src/functions/isThemeInstalled.ts)
+
 ### View Registry
 
 - [Get registered view types](./src/functions/getRegisteredViewTypes.ts)

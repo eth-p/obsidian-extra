@@ -8,6 +8,21 @@ export { default as getRegisteredFileExtensions } from './functions/getRegistere
 // Views.
 export { default as getRegisteredViewTypes } from './functions/getRegisteredViewTypes';
 
+// Themes.
+export { default as getInstalledThemeIDs } from './functions/getInstalledThemeIDs';
+export { default as getCurrentThemeID } from './functions/getCurrentThemeID';
+export { default as getThemeManifest } from './functions/getThemeManifest';
+export { default as getThemeStyleElement } from './functions/getThemeStyleElement';
+export { default as isThemeInstalled } from './functions/isSnippetEnabled';
+
+// Custom CSS snippets.
+export { default as getInstalledSnippetIDs } from './functions/getInstalledSnippetIDs';
+export { default as getEnabledSnippetIDs } from './functions/getEnabledSnippetIDs';
+export { default as getSnippetStyleElements } from './functions/getSnippetStyleElements';
+export { default as getSnippetStyleElement } from './functions/getSnippetStyleElement';
+export { default as isSnippetEnabled } from './functions/isSnippetEnabled';
+export { default as isSnippetInstalled } from './functions/isSnippetInstalled';
+
 // Plugins.
 export { default as getInstalledPluginIDs } from './functions/getInstalledPluginIDs';
 export { default as getEnabledPluginIDs } from './functions/getEnabledPluginIDs';
