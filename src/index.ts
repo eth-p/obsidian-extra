@@ -14,6 +14,7 @@ export { default as getCurrentThemeID } from './functions/getCurrentThemeID';
 export { default as getThemeManifest } from './functions/getThemeManifest';
 export { default as getThemeStyleElement } from './functions/getThemeStyleElement';
 export { default as isThemeInstalled } from './functions/isSnippetEnabled';
+export { default as fetchObsidianStyles } from './functions/fetchObsidianStyles';
 
 // Custom CSS snippets.
 export { default as getInstalledSnippetIDs } from './functions/getInstalledSnippetIDs';
