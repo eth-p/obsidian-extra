@@ -8,5 +8,5 @@ import { App, Latest, Version } from 'obsidian-undocumented';
  * @returns An array of {@link Window}s.
  */
 export default function getFloatingWindows<V extends Version = Latest>(app: ObsidianApp): Window[] {
-	return (app as App<V>).workspace.floatingSplit.children.map((split) => split.win);
+	return (app as App<V>)?.workspace?.floatingSplit?.children?.map((split) => split.win) ?? [];
 }
