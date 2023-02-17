@@ -51,6 +51,10 @@ Certain functions are deemed "unsafe", as they have the ability to easily break 
 - [Disable plugins](./src/functions/disablePlugin.ts) (unsafe)
 - [Reload plugins](./src/functions/reloadPlugin.ts) (unsafe)
 
+### Settings
+
+- [Close settings dialog](./src/functions/closeSettings.ts) (unsafe)
+
 ### CSS
 
 - [List installed snippets](./src/functions/getInstalledSnippetIDs.ts)
