@@ -68,6 +68,7 @@ Certain functions are deemed "unsafe", as they have the ability to easily break 
 - [Get theme manifest](./src/functions/getThemeManifest.ts)
 - [Get theme style element](./src/functions/getThemeStyleElement.ts)
 - [Check if theme is installed](./src/functions/isThemeInstalled.ts)
+- [Get current color scheme](./src/functions/getCurrentColorScheme.ts)
 
 ### View Registry
 

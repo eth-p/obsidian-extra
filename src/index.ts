@@ -11,6 +11,7 @@ export { default as getRegisteredViewTypes } from './functions/getRegisteredView
 // Themes.
 export { default as getInstalledThemeIDs } from './functions/getInstalledThemeIDs';
 export { default as getCurrentThemeID } from './functions/getCurrentThemeID';
+export { default as getCurrentColorScheme } from './functions/getCurrentColorScheme';
 export { default as getThemeManifest } from './functions/getThemeManifest';
 export { default as getThemeStyleElement } from './functions/getThemeStyleElement';
 export { default as isThemeInstalled } from './functions/isSnippetEnabled';
