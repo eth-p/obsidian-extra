@@ -31,3 +31,4 @@ export { default as getPluginInstance } from './functions/getPluginInstance';
 export { default as getPluginManifest } from './functions/getPluginManifest';
 export { default as isPluginEnabled } from './functions/isPluginEnabled';
 export { default as isPluginInstalled } from './functions/isPluginInstalled';
+export { default as openPluginSettings } from './functions/openPluginSettings';

@@ -46,6 +46,7 @@ Certain functions are deemed "unsafe", as they have the ability to easily break 
 - [List enabled plugins](./src/functions/getEnabledPluginIDs.ts)
 - [Get plugin instances](./src/functions/getPluginInstance.ts)
 - [Get plugin manifests](./src/functions/getPluginManifest.ts)
+- [Open plugin settings pane](./src/functions/openPluginSettings.ts)
 - [Enable plugins](./src/functions/enablePlugin.ts) (unsafe)
 - [Disable plugins](./src/functions/disablePlugin.ts) (unsafe)
 - [Reload plugins](./src/functions/reloadPlugin.ts) (unsafe)
