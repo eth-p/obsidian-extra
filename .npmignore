@@ -1,5 +1,6 @@
 # Development
 node_modules
+.*
 
 # System
 .DS_Store
@@ -7,5 +8,9 @@ node_modules
 
 # IDEs
 .vscode
+*.code-workspace
 .idea
 *.iml
+
+# Deployment
+.github
