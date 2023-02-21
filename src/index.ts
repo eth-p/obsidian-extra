@@ -33,3 +33,7 @@ export { default as getPluginManifest } from './functions/getPluginManifest';
 export { default as isPluginEnabled } from './functions/isPluginEnabled';
 export { default as isPluginInstalled } from './functions/isPluginInstalled';
 export { default as openPluginSettings } from './functions/openPluginSettings';
+
+// Misc.
+export { default as createCustomStyleSheet } from './functions/createCustomStyleSheet';
+export type { CustomStyleSheet } from './functions/createCustomStyleSheet';

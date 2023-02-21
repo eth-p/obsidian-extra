@@ -70,7 +70,12 @@ Certain functions are deemed "unsafe", as they have the ability to easily break 
 - [Check if theme is installed](./src/functions/isThemeInstalled.ts)
 - [Get current color scheme](./src/functions/getCurrentColorScheme.ts)
 
+### Custom CSS
+
+- [Create a custom stylesheet at runtime](./src/functions/createCustomStyleSheet.ts)
+
 ### View Registry
 
 - [Get registered view types](./src/functions/getRegisteredViewTypes.ts)
 - [Get registered file extensions](./src/functions/getRegisteredFileExtensions.ts)
+
