@@ -12,7 +12,7 @@ import { versionCompare } from '../internal/utils/versionCompare';
  * @returns The CSS stylesheet contents.
  */
 export default async function fetchObsidianStyles<V extends Version = Latest>(app: ObsidianApp): Promise<string> {
-	if (versionCompare(apiVersion, '1.1.9') === 1) {
+	if (versionCompare(apiVersion, '1.1.15') > 0) {
 		throw new Error(`[obsidian-extra]: Obsidian ${apiVersion} has not been tested with this function`);
 	}
 
