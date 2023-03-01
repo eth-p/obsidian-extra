@@ -8,5 +8,5 @@ import { App, Latest, Version } from 'obsidian-undocumented';
  * @returns The workspace roots.
  */
 export default function getFloatingWindowRoots<V extends Version = Latest>(app: ObsidianApp): HTMLDivElement[] {
-	return (app as App<V>).workspace.floatingSplit.children.map((split) => split.rootEl);
+	return (app as App<V>).workspace.floatingSplit?.children?.map((split) => split.rootEl) ?? [];
 }
