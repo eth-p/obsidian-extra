@@ -1,5 +1,5 @@
 # obsidian-extra
-[![support Obsidian versions](https://img.shields.io/badge/Obsidian-1.1.0_--_1.1.9-blue?logo=obsidian)](https://obsidian.md/) [![total downloads](https://img.shields.io/npm/dt/obsidian-extra?label=Total&logo=npm)](https://www.npmjs.com/package/obsidian-extra)
+[![support Obsidian versions](https://img.shields.io/badge/Obsidian-1.1.0_--_1.1.15-blue?logo=obsidian)](https://obsidian.md/) [![total downloads](https://img.shields.io/npm/dt/obsidian-extra?label=Total&logo=npm)](https://www.npmjs.com/package/obsidian-extra)
 
 Utilities for working with Obsidian's [undocumented API](https://github.com/eth-p/obsidian-undocumented) in a version-agnostic manner.
 
