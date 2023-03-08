@@ -1,7 +1,7 @@
 import { App as ObsidianApp, apiVersion } from 'obsidian';
 import { Latest, Version } from 'obsidian-undocumented';
 
-import { Electron } from '../internal/types/electron';
+import { Electron, Global } from '../internal/types/electron';
 import { versionCompare } from '../internal/utils/versionCompare';
 
 /**
@@ -17,16 +17,18 @@ export default async function fetchObsidianStyles<V extends Version = Latest>(ap
 	}
 
 	try {
+		const require = (globalThis as Global).require;
+
 		// We need "electron" to get the path to the Obsidian asar, and we need "fs" to read the asar.
 		// Note: "fs" was patched by Electron to be able to read asars.
-		const electron: Electron | undefined = globalThis.electron ?? require('electron');
+		const electron: Electron | undefined = (globalThis as Global).electron ?? require?.('electron');
 		if (electron == null) {
 			throw new Error('Unable to get electron module from web renderer process');
 		}
 
-		const fs = require('fs/promises');
+		const fs = require?.('fs/promises');
 		if (fs?.readFile == null) {
-			throw new Error('Unable to get fs module from web renderer process');
+			throw new Error('Unable to get fs/promises module from web renderer process');
 		}
 
 		// Get the path to the Obsidian asar.
