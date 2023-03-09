@@ -31,6 +31,17 @@ export interface Electron {
 }
 
 /**
+ * The Node `process` module with extensions to the `versions` field to include data provided by Electron.
+ */
+type ElectronProcess = NodeModules["process"] & {
+	versions: NodeModules["process"]["versions"] & {
+		chrome?: string;
+		electron?: string;
+		v8?: string;
+	}
+}
+
+/**
  * A subset of modules that are available underneath Obsidian's web process.
  *
  * While it would be nice to include the actual `@types/node` definitions, they would become side-effect definitions
@@ -42,7 +53,10 @@ export interface Electron {
  *
  * Until then, any Node modules used by `obsidian-extra` should be manually defined in this directory.
  */
-type MODULES = NodeModules & {electron: Electron};
+type MODULES = NodeModules & {
+	"electron": Electron,
+	"process": ElectronProcess,
+};
 
 /**
  * Additional global variables that are exposed under Obsidian's web process.
@@ -52,6 +66,7 @@ type MODULES = NodeModules & {electron: Electron};
  */
 declare interface ElectronWebProcessGlobals {
 	electron?: Electron;
+	process?: ElectronProcess;
 	require?: <M extends keyof MODULES | string>(name: M) => (M extends keyof MODULES ? MODULES[M] : unknown) | never;
 }
 

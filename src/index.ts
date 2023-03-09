@@ -37,3 +37,22 @@ export { default as openPluginSettings } from './functions/openPluginSettings';
 // Misc.
 export { default as createCustomStyleSheet } from './functions/createCustomStyleSheet';
 export type { CustomStyleSheet } from './functions/createCustomStyleSheet';
+
+// Platform.
+export {
+	default as detectPlatformBrowser,
+	type BrowserName,
+	type BrowserInfo,
+} from './functions/detectPlatformBrowser';
+
+export {
+	default as detectPlatformRuntime,
+	type RuntimeName,
+	type RuntimeInfo,
+} from './functions/detectPlatformRuntime';
+
+export {
+	default as detectPlatformOperatingSystem,
+	type OperatingSystemName,
+	type OperatingSystemInfo,
+} from './functions/detectPlatformOperatingSystem';
