@@ -1,0 +1,10 @@
+.obsidian-platform-info h2 {
+	border-bottom: 1px solid var(--background-modifier-border);
+	padding-bottom: 0.75em;
+}
+
+.obsidian-platform-info .setting-item {
+	border-top: none;
+	padding-top: 0;
+	padding-left: var(--size-4-6);
+}

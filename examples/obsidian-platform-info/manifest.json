@@ -1,0 +1,10 @@
+{
+	"id": "platform-info",
+	"version": "0.0.0",
+	"description": "Displays information queried through obsidian-extra.",
+	"author": "eth-p",
+	"authorUrl": "https://github.com/eth-p",
+	"name": "EXAMPLE: Platform Information",
+	"minAppVersion": "1.0.0",
+	"isDesktopOnly": false
+}
