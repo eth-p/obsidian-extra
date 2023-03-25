@@ -46,7 +46,7 @@ async function fetchObsidianStylesViaFetch(path: string): Promise<string> {
  * doesn't return anything. It also doesn't work for the mobile apps.
  */
 async function fetchObsidianStylesViaElectron(path: string): Promise<string> {
-	if (versionCompare(apiVersion, '1.1.15') > 0) {
+	if (versionCompare(apiVersion, '1.1.16') > 0) {
 		throw new Error(`Obsidian ${apiVersion} has not been tested with this function`);
 	}
 
