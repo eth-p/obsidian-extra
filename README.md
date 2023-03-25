@@ -69,6 +69,7 @@ Certain functions are deemed "unsafe", as they have the ability to easily break 
 - [Get theme style element](./src/functions/getThemeStyleElement.ts)
 - [Check if theme is installed](./src/functions/isThemeInstalled.ts)
 - [Get current color scheme](./src/functions/getCurrentColorScheme.ts)
+- [Get Obsidian's CSS rules](./src/functions/fetchObsidianStyleSheet.ts)
 
 ### Custom CSS
 
@@ -78,4 +79,10 @@ Certain functions are deemed "unsafe", as they have the ability to easily break 
 
 - [Get registered view types](./src/functions/getRegisteredViewTypes.ts)
 - [Get registered file extensions](./src/functions/getRegisteredFileExtensions.ts)
+
+### Platform
+
+- [Get OS info](./src/functions/detectPlatformOperatingSystem.ts)
+- [Get runtime info](./src/functions/detectPlatformRuntime.ts)
+- [Get browser info](./src/functions/detectPlatformBrowser.ts)
 
